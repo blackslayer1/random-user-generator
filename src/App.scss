@@ -1,0 +1,70 @@
+@font-face { font-family: erikatype; 
+  src: url('./fonts/DigiGraphics.ttf'); 
+}
+
+.App {
+  text-align: center;
+}
+
+body{
+  background-image: url('./img/background.jpg');
+  background-size: cover;
+}
+
+button{
+  cursor: pointer;
+}
+
+.generateButton{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  width: 200px;
+  background: slategrey;
+  border: none;
+  font-weight: 600;
+  color: rgb(231, 231, 231);
+  font-size: arial;
+  transition: all 0.4s;
+  &:hover{
+    background: lighten(slategrey, 10%);
+  }
+}
+
+.userInfo{
+  background: rgba(255, 255, 255, 0.521);
+  height: 350px;
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 380px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  visibility: hidden;
+  color: rgb(80, 80, 80);
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  border-right: .15em solid rgb(255, 255, 255);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: 
+    typing 6.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255); }
+}
